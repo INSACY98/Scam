@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch Card</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #serialNumberText {
+            margin-bottom: 20px;
+            font-size: 16px;
+            text-align: center;
+        }
+        canvas {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid #e5312d; /* Target red color */
+            background-color: #f2f2f2; /* Light gray background */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                flex-direction: column;
+            }
+
+            canvas {
+                width: 90%;
+                height: auto;
+            }
+
+            #serialNumberText {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p id="serialNumberText">Can you provide me the Redemption Code?</p>
+    <canvas id="scratchCard" width="200" height="100"></canvas>
+    <script src="scratch.js"></script>
+</body>
+</html>
