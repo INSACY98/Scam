@@ -1,106 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scratch Card</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <style>
-        body {
+      body {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        margin: 10%;
+        font-family: Arial, sans-serif;
+      }
 
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
+      canvas {
+        width: 90%;
+        height: auto;
+      }
 
-        #serialNumberText {
-            margin-bottom: 20px;
-            font-size: 16px;
-            text-align: center;
-        }
-        canvas {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            border: 2px solid #e5312d; /* Target red color */
-            background-color: #f2f2f2; /* Light gray background */
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-        }
+      #serialNumberText {
+        font-size: 14px;
+      }
 
-        @media (max-width: 600px) {
-            body {
-                flex-direction: column;
-            }
+      #header {
+        background-color: #333;
+        color: #fff;
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+      }
 
-            canvas {
-                width: 90%;
-                height: auto;
-            }
+      #header h1 {
+        margin: auto;
+        font-size: 24px;
+      }
 
-            #serialNumberText {
-                font-size: 14px;
-            }
+      #nav {
+        margin-top: auto;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
 
-        #header {
-            background-color: #333;
-            color: #fff;
-            width: 100%;
-            padding: 15px 0;
-            text-align: center;
-        }
+      #nav {
+        font-size: 14px;
+        margin-top: 10px;
+      }
 
-        #header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-
-        #nav {
-            margin-top: 10px;
-        }
-
-        #nav a {
-            color: black;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        #nav a:hover {
-            text-decoration: underline;
-        }
-        }
+      #nav a:hover {
+        text-decoration: underline;
+      }
+      .introduction {
+        vertical-align: middle;
+        margin: 10%;
+      }
+      .title {
+        text-align: center;
+        vertical-align: middle;
+      }
+      #img {
+        vertical-align: left;
+        width: 90%;
+        margin: 0;
+      }
     </style>
     <div id="nav">
-       
-        <a href="index.html">Home</a>
-
+      <a href="index.html">Back to the scratch card.</a>
     </div>
-</head>
-<body>
-
+  </head>
+  <body>
     <h1 className="title">Gift Card Scam Experience</h1>
- 
-    
+
     <p className="introduction">
-        In May 2020, amidst the constraints of COVID-19 and fresh from completing my thesis, 
-        I found myself looking for ways to occupy my time within the confines of my dorm room. 
-        In an attempt to declutter, I decided to list my soccer shoes for sale on eBay. 
-        Shortly after, a prospective buyer reached out, 
-        expressing interest in buying the shoes as a birthday present for their nephew. 
-        On the surface, their request seemed innocuous. 
-        However, the situation took a questionable turn when they asked me to buy an eBay gift card and share the redemption code with them, 
-        a hallmark of a common scam.
-        Despite the red flags, I was swayed by the buyer's unusually high bid during the auction. 
-        This, coupled with their persuasive communication, led me to overlook the potential for deceit. 
-        Trusting in the integrity of the transaction, I proceeded as requested, 
-        only to realize later that I had fallen victim to a well-orchestrated gift card scam.
-      </p>
+      In May 2020, amidst the constraints of COVID-19 and fresh from completing
+      my thesis, I found myself looking for ways to occupy my time within the
+      confines of my dorm room. In an attempt to declutter, I decided to list my
+      soccer shoes for sale on eBay. Shortly after, a prospective buyer reached
+      out, expressing interest in buying the shoes as a birthday present for
+      their nephew. On the surface, their request seemed innocuous. However, the
+      situation took a questionable turn when they asked me to buy an eBay gift
+      card and share the redemption code with them, a hallmark of a common scam.
+      Despite the red flags, for some reason, I was convinced by the buyer's
+      unusually high bid during the auction. This, coupled with their persuasive
+      communication, led me to overlook the potential for deceit. Trusting in
+      the integrity of the transaction, I proceeded as requested, only to
+      realize later that I had fallen victim to a well-orchestrated gift card
+      scam.
+    </p>
 
-      <img src="originalCard.png" alt="Card Scan">
+    <img
+      id="img"
+      src="originalCard.png"
+      alt="Card Scan from the original scam."
+    />
+    <p className="introduction">
+      Now this page, alongside of a physical card with NFC feature, is the whole
+      Gift Card Scam Experience, marking a memorable instance of being scammed
+      in the US.
+    </p>
+  </body>
 
-    
-</body>
+  <footer>
+    <p>Experience and Web: Yan Chen</p>
+    <p><a href="https://github.com/INSACY98">Yan's Github</a></p>
+  </footer>
 </html>
